@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitori - Privacy Policy & Terms of Service</title>
+    <meta name="description" content="Privacy Policy and Terms of Service for Habitori - Privacy-first habit tracker for iOS">
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        coral: '#FF6B6B',
+                        mint: '#4ECDC4',
+                        green: '#6BCF7F',
+                        blue: '#4A90E2',
+                        purple: '#9B59B6'
+                    }
+                }
+            },
+            darkMode: 'class'
+        }
+    </script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+
+    <!-- Theme Toggle Button - Fixed position top right -->
+    <button 
+        id="theme-toggle" 
+        class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700"
+        aria-label="Toggle dark mode"
+    >
+        <svg id="sun-icon" class="w-6 h-6 text-gray-800 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="moon-icon" class="w-6 h-6 text-gray-200 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <!-- Back Button -->
+    <div class="max-w-4xl mx-auto pt-20 pb-4">
+        <a href="index.html" class="inline-flex items-center gap-2 text-blue hover:text-mint transition-colors font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <section class="py-8 px-6 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="mb-12">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-coral via-mint to-green bg-clip-text text-transparent">
+                    Privacy Policy & Terms of Service
+                </h1>
+                <p class="text-gray-600 dark:text-gray-400 text-lg">Last Updated: December 26, 2025</p>
+            </div>
+
+            <!-- Content Container -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-8 md:p-12 space-y-12">
+                
+                <!-- Privacy Policy Section -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Privacy Policy</h2>
+                    
+                    <div class="bg-blue/10 dark:bg-blue/20 border-l-4 border-blue rounded-lg p-6 mb-8">
+                        <p class="text-gray-800 dark:text-gray-200"><strong>TL;DR:</strong> Habitori does not collect, share, or transmit your personal information. Your data stays on your device. Optional iCloud sync stores data in your personal iCloud account only.</p>
+                    </div>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">1. Introduction</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Habitori ("we," "our," or "the app") is committed to protecting your privacy. This Privacy Policy explains how we handle information when you use Habitori for iOS, iPadOS, and watchOS.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">2. Information We Collect</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>We do not collect any personal information.</strong></p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Habitori operates entirely on your device and does not send any data to our servers. The app does not include any analytics, tracking, or advertising services.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">3. Data You Create</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">When you use Habitori, the following information is stored locally on your device:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li><strong>Habits:</strong> Names, descriptions, colors, notes, reminders, and scheduling preferences</li>
+                                <li><strong>Completions:</strong> Dates and times when you complete habits, optional notes and mood ratings</li>
+                                <li><strong>Tasks:</strong> Task lists associated with your habits</li>
+                                <li><strong>Stages:</strong> Milestone information and progress tracking</li>
+                                <li><strong>Dismissals:</strong> Records of when you dismiss habits for specific days or weeks</li>
+                                <li><strong>Earned Badges:</strong> Achievement records including the date earned and associated habit</li>
+                                <li><strong>Settings:</strong> Your app preferences and configuration</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">All of this data is stored using Apple's SwiftData framework in a local SQLite database on your device.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">4. Data Storage and Security</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>Local Storage:</strong> By default, all your data is stored locally on your iOS/iPadOS device in the app's secure container. On watchOS, data is stored in the Watch app's container and synced via Bluetooth to your iPhone using Apple's WatchConnectivity framework.</p>
+                            
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>App Group Storage:</strong> To enable data sharing between the iOS app and Apple Watch app, we use an App Group container (<code class="bg-gray-100 dark:bg-gray-700 px-2 py-1 rounded text-sm">group.dev.northwake.HabitKit</code>). This is a secure iOS feature that allows apps from the same developer to share data on your device only.</p>
+                            
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>Optional iCloud Sync:</strong> You may optionally enable iCloud sync in the app settings. When enabled:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>Your habit data is synced to your personal iCloud account using Apple's CloudKit service</li>
+                                <li>Data is encrypted in transit and at rest using Apple's security standards</li>
+                                <li>Only you can access this data across your Apple devices signed in to the same iCloud account</li>
+                                <li>We have no access to your iCloud data</li>
+                                <li>You can disable iCloud sync at any time in the app settings</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">5. Permissions</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">Habitori may request the following permissions:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li><strong>Notifications:</strong> To send you habit reminders at scheduled times. You can customize notification settings in the app.</li>
+                                <li><strong>iCloud:</strong> Only requested if you enable iCloud sync. Used to sync your data across your devices.</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">All permissions are optional. The app will function without them, though some features may be limited.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">6. Data Sharing</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>We do not share, sell, or transmit your data to any third parties.</strong></p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Habitori does not integrate with any third-party services, analytics platforms, advertising networks, or social media platforms. Your data stays entirely on your device or in your personal iCloud account.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">7. Data Export and Deletion</h3>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li><strong>Export:</strong> You can export your habit data at any time from the app's settings in JSON format for backup purposes. The exported file includes all your habits, tasks, completions, dismissals, stages, and earned badges.</li>
+                                <li><strong>Import:</strong> You can import previously exported data back into the app.</li>
+                                <li><strong>Deletion:</strong> You can delete individual habits or all your data at any time from within the app. Uninstalling the app will permanently delete all local data. If iCloud sync is enabled, you can delete iCloud data by disabling sync and deleting the data from your device, or by managing your iCloud storage in iOS Settings.</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">8. Data Retention</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">Your data is retained on your device until you delete it or uninstall the app. If you have iCloud sync enabled, your data will remain in your iCloud account even if you uninstall the app from a device, allowing you to restore it when you reinstall the app on any device signed in to the same iCloud account.</p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">You can delete your data at any time through the app's settings, or by uninstalling the app (which deletes local data only). To delete iCloud data, disable iCloud sync in the app settings and then manage your iCloud storage through iOS Settings.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">9. Third-Party Services</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">Habitori does not use any third-party services, SDKs, or frameworks for analytics, crash reporting, or advertising. The only Apple services used are:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li><strong>SwiftData/CoreData:</strong> For local data persistence</li>
+                                <li><strong>CloudKit:</strong> For optional iCloud sync (only if you enable it)</li>
+                                <li><strong>UserNotifications:</strong> For local notifications</li>
+                                <li><strong>WatchConnectivity:</strong> For Apple Watch sync via Bluetooth</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">10. Your Privacy Rights (GDPR/CCPA)</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">If you are located in the European Economic Area (EEA), United Kingdom, or California, you have certain rights regarding your personal data:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li><strong>Right to Access:</strong> You can access your data at any time by exporting it from the app's settings</li>
+                                <li><strong>Right to Deletion:</strong> You can delete your data at any time through the app's settings or by uninstalling the app</li>
+                                <li><strong>Right to Data Portability:</strong> You can export your data in JSON format for use in other services</li>
+                                <li><strong>Right to Opt-Out:</strong> You can disable iCloud sync at any time in the app settings</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">To exercise any of these rights, use the features provided in the app or contact us using the information provided below.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">11. Children's Privacy</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Habitori is not directed to children under the age of 13. We do not knowingly collect any information from children. The app is rated 17+ due to references to substance recovery support in habit templates.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">12. Changes to This Privacy Policy</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">We may update this Privacy Policy from time to time. Any changes will be reflected in the app and on this page with an updated "Last Updated" date.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">13. Contact Us</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">If you have questions about this Privacy Policy, please contact us at:</p>
+                            <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                <p class="text-gray-800 dark:text-gray-200"><strong>Email:</strong> <a href="mailto:contact@northwake.dev" class="text-blue hover:text-mint transition">contact@northwake.dev</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Divider -->
+                <div class="border-t border-gray-200 dark:border-gray-700"></div>
+
+                <!-- Terms of Service Section -->
+                <div>
+                    <h2 class="text-3xl font-bold mb-6 text-gray-900 dark:text-white">Terms of Service</h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">1. Acceptance of Terms</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">By downloading, installing, or using Habitori ("the App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, do not use the App.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">2. License</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Subject to your compliance with these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to use Habitori for your personal, non-commercial use on iOS, iPadOS, and watchOS devices that you own or control.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">3. Description of Service</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">Habitori is a habit tracking application that helps you:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>Create and track daily, weekly, and custom interval habits</li>
+                                <li>Set reminders and receive notifications</li>
+                                <li>Monitor your progress with visual tracking tools</li>
+                                <li>Sync data across your devices using optional iCloud sync</li>
+                                <li>Use pre-built templates for various habit categories</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <div class="bg-coral/10 dark:bg-coral/20 border-l-4 border-coral rounded-lg p-6 mb-4">
+                                <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">4. Medical Disclaimer - Important</h3>
+                                <p class="text-gray-800 dark:text-gray-200 mb-3"><strong>Habitori provides habit tracking tools for personal development and recovery support. This app does not provide medical advice, diagnosis, or treatment.</strong></p>
+                                <p class="text-gray-800 dark:text-gray-200 mb-3">The templates, features, and content provided in Habitori are for informational and tracking purposes only. They are not intended to:</p>
+                                <ul class="list-disc list-inside space-y-2 text-gray-800 dark:text-gray-200 ml-4">
+                                    <li>Replace professional medical advice, diagnosis, or treatment</li>
+                                    <li>Serve as a substitute for consultation with qualified healthcare professionals</li>
+                                    <li>Treat, cure, or prevent any medical condition or substance use disorder</li>
+                                </ul>
+                            </div>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>If you have medical concerns, substance use disorders, mental health conditions, or any health-related issues, please consult with qualified healthcare professionals.</strong> In case of medical emergencies, contact emergency services immediately (911 in the US).</p>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">The recovery support templates (such as those for alcohol, nicotine, or other substances) are tracking tools only and are not medical treatment programs.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">5. User Responsibilities</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">You are responsible for:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>Maintaining the security of your device and iCloud account</li>
+                                <li>The accuracy and completeness of any information you enter into the App</li>
+                                <li>Any decisions you make based on information tracked in the App</li>
+                                <li>Backing up your data using the export feature if desired</li>
+                                <li>Complying with all applicable laws and regulations when using the App</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">6. Availability and Changes</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">We reserve the right to:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>Modify, update, or discontinue the App or any features at any time</li>
+                                <li>Change these Terms at any time with notice through the App or this page</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">The App is provided "as-is" and we do not guarantee that it will be available, error-free, or uninterrupted at all times.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">7. iCloud Sync</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">If you enable iCloud sync:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>You must have a valid iCloud account with sufficient storage space</li>
+                                <li>Sync functionality depends on Apple's iCloud service availability</li>
+                                <li>We are not responsible for any issues with iCloud sync, data conflicts, or data loss</li>
+                                <li>You should regularly export your data as a backup</li>
+                            </ul>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mt-4">The App will continue to function in local-only mode if iCloud is unavailable or disabled.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">8. Intellectual Property</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">Habitori and all its content, features, and functionality are owned by us and are protected by international copyright, trademark, and other intellectual property laws. You may not:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>Copy, modify, or reverse engineer the App</li>
+                                <li>Remove any copyright or proprietary notices</li>
+                                <li>Use the App for any commercial purpose without our permission</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">9. Limitation of Liability</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3"><strong>To the maximum extent permitted by applicable law:</strong></p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>The app is provided "as is" and "as available" without warranties of any kind, either express or implied</li>
+                                <li>We disclaim all warranties, including implied warranties of merchantability, fitness for a particular purpose, and non-infringement</li>
+                                <li>We shall not be liable for any indirect, incidental, special, consequential, or punitive damages, including loss of data, loss of profits, or personal injury</li>
+                                <li>Our total liability shall not exceed the amount you paid for the app (if any)</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">10. Indemnification</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">You agree to indemnify and hold harmless Habitori and its developers from any claims, damages, losses, liabilities, and expenses (including legal fees) arising from:</p>
+                            <ul class="list-disc list-inside space-y-2 text-gray-700 dark:text-gray-300 ml-4">
+                                <li>Your use or misuse of the App</li>
+                                <li>Your violation of these Terms</li>
+                                <li>Your violation of any rights of another party</li>
+                            </ul>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">11. Privacy</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">Your use of the App is also governed by our Privacy Policy (above). By using the App, you consent to our privacy practices as described.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">12. Termination</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">We reserve the right to terminate or suspend your access to the App at any time, with or without notice, for any reason, including violation of these Terms. You may stop using the App at any time by uninstalling it from your devices.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">13. Governing Law</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">These Terms shall be governed by and construed in accordance with the laws of [Your Jurisdiction], without regard to its conflict of law provisions.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">14. Severability</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">15. Entire Agreement</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">These Terms, together with the Privacy Policy, constitute the entire agreement between you and Habitori regarding the use of the App.</p>
+                        </div>
+                        
+                        <div>
+                            <h3 class="text-xl font-semibold mb-3 text-gray-900 dark:text-white">16. Contact Information</h3>
+                            <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-3">If you have any questions about these Terms, please contact us at:</p>
+                            <div class="bg-gray-50 dark:bg-gray-700 rounded-lg p-4">
+                                <p class="text-gray-800 dark:text-gray-200"><strong>Email:</strong> <a href="mailto:contact@northwake.dev" class="text-blue hover:text-mint transition">contact@northwake.dev</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Footer -->
+                <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-12">
+                    <p class="text-center text-gray-600 dark:text-gray-400 text-sm">© 2026 <a href="https://northwake.dev" target="_blank" rel="noopener noreferrer" class="text-blue hover:text-mint transition">Northwake</a>. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Theme Toggle Script -->
+    <script>
+        // Theme toggle functionality
+        (function() {
+            const themeToggle = document.getElementById('theme-toggle');
+            const html = document.documentElement;
+            
+            // Get saved theme or detect system preference
+            function getInitialTheme() {
+                const savedTheme = localStorage.getItem('theme');
+                if (savedTheme) {
+                    return savedTheme;
+                }
+                // Detect system preference
+                return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+            }
+            
+            // Apply theme
+            function setTheme(theme) {
+                if (theme === 'dark') {
+                    html.classList.add('dark');
+                } else {
+                    html.classList.remove('dark');
+                }
+                localStorage.setItem('theme', theme);
+            }
+            
+            // Initialize theme
+            const initialTheme = getInitialTheme();
+            setTheme(initialTheme);
+            
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', () => {
+                const currentTheme = html.classList.contains('dark') ? 'dark' : 'light';
+                const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+                setTheme(newTheme);
+            });
+            
+            // Listen for system theme changes (optional - only if no manual preference set)
+            window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+                // Only auto-update if user hasn't manually set a preference
+                if (!localStorage.getItem('theme')) {
+                    setTheme(e.matches ? 'dark' : 'light');
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>
