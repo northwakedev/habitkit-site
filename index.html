@@ -37,7 +37,8 @@
                         mint: '#4ECDC4',
                         green: '#6BCF7F',
                         blue: '#4A90E2',
-                        purple: '#9B59B6'
+                        purple: '#9B59B6',
+                        yellow: '#FFD93D'
                     },
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-out forwards',
@@ -59,6 +60,20 @@
         }
     </script>
     <style>
+        /* Load JetBrains Mono SemiBold font */
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('assets/font/JetBrainsMono-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+        
+        /* Habitori font class */
+        .font-habitori {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+        
         /* Smooth animations */
         .animate-on-scroll {
             opacity: 0;
@@ -66,7 +81,7 @@
         }
     </style>
 </head>
-<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
+<body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-gray-100 transition-colors">
 
     <!-- Theme Toggle Button - Fixed position top right -->
     <button 
@@ -90,14 +105,14 @@
             <!-- Left: Content -->
             <div class="text-center lg:text-left animate-fade-in">
                 <!-- App Icon -->
-                <div class="flex justify-center lg:justify-start mb-6">
+                <div class="flex justify-center lg:justify-start mb-3">
                     <img src="assets/habitkit-icon.png" alt="Habitori App Icon" class="w-24 h-24 rounded-2xl">
                 </div>
                 
-                <h1 class="text-5xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-coral via-mint to-green bg-clip-text text-transparent">
+                <h1 class="text-3xl md:text-4xl font-bold mb-8 text-black dark:text-white font-habitori">
                     Habitori
                 </h1>
-                <h2 class="text-3xl md:text-4xl font-bold mb-6 dark:text-white">
+                <h2 class="text-3xl md:text-4xl font-bold mb-3 bg-gradient-to-r from-coral via-mint to-green bg-clip-text text-transparent">
                     Build Better Habits
                 </h2>
                 <p class="text-xl text-gray-600 dark:text-gray-300 max-w-lg mb-8 mx-auto lg:mx-0">
@@ -116,11 +131,13 @@
             </div>
             
             <!-- Right: Phone Mockup -->
-            <div class="flex justify-center animate-fade-in">
-                <!-- Light mode image -->
-                <img src="assets/light/hero.png" alt="Habitori iPhone App Screenshot" class="w-full max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl h-auto dark:hidden">
-                <!-- Dark mode image -->
-                <img src="assets/dark/hero.png" alt="Habitori iPhone App Screenshot" class="w-full max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl h-auto hidden dark:block">
+            <div class="flex justify-center animate-fade-in w-full">
+                <div class="bg-white/10 dark:bg-black/30 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/20 dark:border-gray-700/30 w-full max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl">
+                    <!-- Light mode image -->
+                    <img src="assets/light/hero.png" alt="Habitori iPhone App Screenshot" class="w-full h-auto dark:hidden rounded-2xl">
+                    <!-- Dark mode image -->
+                    <img src="assets/dark/hero.png" alt="Habitori iPhone App Screenshot" class="w-full h-auto hidden dark:block rounded-2xl">
+                </div>
             </div>
         </div>
     </section>
@@ -128,35 +145,11 @@
     <!-- ============================================ -->
     <!-- FEATURES SECTION (Alternating Layout) -->
     <!-- ============================================ -->
-    <section class="py-20 px-6 bg-white dark:bg-gray-800">
+    <section class="py-20 px-6 bg-white dark:bg-black">
         <div class="max-w-7xl mx-auto">
             <h2 class="text-4xl font-bold text-center mb-16">Everything you need to build lasting habits</h2>
             
-            <!-- Feature 1: Visual Progress (Left Image, Right Text) -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-on-scroll">
-                <div class="order-2 lg:order-1">
-                    <div class="w-full h-[400px] bg-gradient-to-br from-green/20 to-mint/20 dark:from-green/10 dark:to-mint/10 rounded-2xl shadow-lg flex items-end justify-center overflow-hidden border-2 border-green/30 relative">
-                        <!-- Light mode image -->
-                        <img src="assets/light/activity-log.png" alt="Visual Progress - Contribution Graph" class="w-auto max-h-[400px] dark:hidden">
-                        <!-- Dark mode image -->
-                        <img src="assets/dark/activity-log.png" alt="Visual Progress - Contribution Graph" class="w-auto max-h-[400px] hidden dark:block">
-                    </div>
-                </div>
-                <div class="order-1 lg:order-2">
-                    <div class="w-16 h-16 bg-green rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
-                        📊
-                    </div>
-                    <h3 class="text-3xl font-bold mb-4">Visual Progress Tracking</h3>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
-                        See your progress at a glance with beautiful contribution-style graphs inspired by GitHub. Watch your streaks grow and stay motivated.
-                    </p>
-                    <p class="text-lg text-gray-500 dark:text-gray-400">
-                        Visual feedback makes it easier to spot patterns and celebrate your consistency.
-                    </p>
-                </div>
-            </div>
-            
-            <!-- Feature 2: Smart Templates (Right Image, Left Text) -->
+            <!-- Feature 1: Smart Templates (Right Image, Left Text) -->
             <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-on-scroll">
                 <div>
                     <div class="w-16 h-16 bg-mint rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
@@ -180,11 +173,12 @@
                 </div>
             </div>
             
-            <!-- Feature 3: Flexible Scheduling (Card Style) -->
-            <div class="max-w-4xl mx-auto mb-24 animate-on-scroll">
-                <div class="bg-gradient-to-br from-coral/10 to-purple/10 dark:from-coral/5 dark:to-purple/5 rounded-3xl p-12 border-2 border-coral/20 dark:border-coral/10">
+            <!-- Feature 2 & 3: Flexible Scheduling & Your Data, Your Device (Side by Side) -->
+            <div class="grid lg:grid-cols-2 gap-8 mb-24 animate-on-scroll">
+                <!-- Flexible Scheduling -->
+                <div class="bg-gradient-to-br from-yellow/10 to-purple/10 dark:from-yellow/5 dark:to-purple/5 rounded-3xl p-12 border-2 border-yellow/20 dark:border-yellow/10">
                     <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 bg-coral rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg flex-shrink-0">
+                        <div class="w-16 h-16 bg-yellow rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg flex-shrink-0">
                             📅
                         </div>
                         <div class="flex-1">
@@ -194,6 +188,24 @@
                             </p>
                             <p class="text-lg text-gray-500 dark:text-gray-400">
                                 Not every habit needs to be daily. Build routines that actually work for you.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Your Data, Your Device -->
+                <div class="bg-gradient-to-br from-blue/10 to-purple/10 dark:from-blue/5 dark:to-purple/5 rounded-3xl p-12 border-2 border-blue/20 dark:border-blue/10">
+                    <div class="flex items-start gap-6">
+                        <div class="w-16 h-16 bg-blue rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg flex-shrink-0">
+                            🔒
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-3xl font-bold mb-4">Your Data, Your Device</h3>
+                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
+                                Your habits stay on your device. No tracking, no accounts, no data collection. Optional iCloud sync available if you want backup—but privacy is the default.
+                            </p>
+                            <p class="text-lg text-gray-500 dark:text-gray-400">
+                                Privacy isn't a feature—it's the foundation. We can't see your data because we never collect it.
                             </p>
                         </div>
                     </div>
@@ -224,23 +236,27 @@
                 </div>
             </div>
             
-            <!-- Feature 5: Privacy First (Card Style) -->
-            <div class="max-w-4xl mx-auto animate-on-scroll">
-                <div class="bg-gradient-to-br from-blue/10 to-purple/10 dark:from-blue/5 dark:to-purple/5 rounded-3xl p-12 border-2 border-blue/20 dark:border-blue/10">
-                    <div class="flex items-start gap-6">
-                        <div class="w-16 h-16 bg-blue rounded-2xl flex items-center justify-center text-white text-3xl shadow-lg flex-shrink-0">
-                            🔒
-                        </div>
-                        <div class="flex-1">
-                            <h3 class="text-3xl font-bold mb-4">Your Data, Your Device</h3>
-                            <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
-                                Your habits stay on your device. No tracking, no accounts, no data collection. Optional iCloud sync available if you want backup—but privacy is the default.
-                            </p>
-                            <p class="text-lg text-gray-500 dark:text-gray-400">
-                                Privacy isn't a feature—it's the foundation. We can't see your data because we never collect it.
-                            </p>
-                        </div>
+            <!-- Feature 5: Visual Progress (Left Image, Right Text) -->
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-on-scroll">
+                <div class="order-2 lg:order-1">
+                    <div class="w-full h-[400px] bg-gradient-to-br from-green/20 to-mint/20 dark:from-green/10 dark:to-mint/10 rounded-2xl shadow-lg flex items-end justify-center overflow-hidden border-2 border-green/30 relative">
+                        <!-- Light mode image -->
+                        <img src="assets/light/activity-log.png" alt="Visual Progress - Contribution Graph" class="w-auto max-h-[400px] dark:hidden">
+                        <!-- Dark mode image -->
+                        <img src="assets/dark/activity-log.png" alt="Visual Progress - Contribution Graph" class="w-auto max-h-[400px] hidden dark:block">
                     </div>
+                </div>
+                <div class="order-1 lg:order-2">
+                    <div class="w-16 h-16 bg-green rounded-2xl flex items-center justify-center text-white text-3xl mb-6 shadow-lg">
+                        📊
+                    </div>
+                    <h3 class="text-3xl font-bold mb-4">Visual Progress Tracking</h3>
+                    <p class="text-xl text-gray-600 dark:text-gray-300 mb-4">
+                        See your progress at a glance with beautiful contribution-style graphs inspired by GitHub. Watch your streaks grow and stay motivated.
+                    </p>
+                    <p class="text-lg text-gray-500 dark:text-gray-400">
+                        Visual feedback makes it easier to spot patterns and celebrate your consistency.
+                    </p>
                 </div>
             </div>
         </div>
@@ -323,14 +339,14 @@
     <!-- ============================================ -->
     <!-- FOOTER -->
     <!-- ============================================ -->
-    <footer class="py-12 px-6 bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-300">
+    <footer class="py-12 px-6 bg-gray-100 dark:bg-black text-gray-700 dark:text-gray-300">
         <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row justify-between items-center gap-8">
                 <!-- Left: Logo and Copyright -->
                 <div class="flex items-center gap-4">
                     <img src="assets/habitkit-icon.png" alt="Habitori" class="w-12 h-12 rounded-xl">
                     <div>
-                        <div class="font-bold text-gray-900 dark:text-white text-lg">Habitori</div>
+                        <div class="font-bold text-gray-900 dark:text-white text-lg font-habitori">Habitori</div>
                         <div class="text-sm text-gray-600 dark:text-gray-400">© 2026 <a href="https://northwake.dev" target="_blank" rel="noopener noreferrer" class="text-blue hover:text-mint transition">Northwake</a>. All rights reserved.</div>
                     </div>
                 </div>
