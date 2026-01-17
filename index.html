@@ -115,11 +115,12 @@
                 </a>
             </div>
             
-            <!-- Right: Phone Mockup Placeholder -->
+            <!-- Right: Phone Mockup -->
             <div class="flex justify-center animate-fade-in">
-                <div class="w-full max-w-sm h-[600px] bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-800 rounded-[3rem] shadow-2xl flex items-center justify-center text-gray-600 dark:text-gray-300 font-semibold text-center p-8 border-8 border-gray-800 dark:border-gray-600">
-                    iPhone Mockup<br/>Screenshot<br/>Placeholder<br/>(375x812)
-                </div>
+                <!-- Light mode image -->
+                <img src="assets/light/hero.png" alt="Habitori iPhone App Screenshot" class="w-full max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl h-auto dark:hidden">
+                <!-- Dark mode image -->
+                <img src="assets/dark/hero.png" alt="Habitori iPhone App Screenshot" class="w-full max-w-lg lg:max-w-2xl xl:max-w-3xl 2xl:max-w-4xl h-auto hidden dark:block">
             </div>
         </div>
     </section>
@@ -134,8 +135,11 @@
             <!-- Feature 1: Visual Progress (Left Image, Right Text) -->
             <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-on-scroll">
                 <div class="order-2 lg:order-1">
-                    <div class="w-full h-[400px] bg-gradient-to-br from-green/20 to-mint/20 dark:from-green/10 dark:to-mint/10 rounded-2xl shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 font-semibold text-center p-8 border-2 border-green/30">
-                        Feature Screenshot<br/>Visual Progress<br/>Contribution Graph<br/>(600x800)
+                    <div class="w-full h-[400px] bg-gradient-to-br from-green/20 to-mint/20 dark:from-green/10 dark:to-mint/10 rounded-2xl shadow-lg flex items-end justify-center overflow-hidden border-2 border-green/30 relative">
+                        <!-- Light mode image -->
+                        <img src="assets/light/activity-log.png" alt="Visual Progress - Contribution Graph" class="w-auto max-h-[400px] dark:hidden">
+                        <!-- Dark mode image -->
+                        <img src="assets/dark/activity-log.png" alt="Visual Progress - Contribution Graph" class="w-auto max-h-[400px] hidden dark:block">
                     </div>
                 </div>
                 <div class="order-1 lg:order-2">
@@ -167,8 +171,11 @@
                     </p>
                 </div>
                 <div>
-                    <div class="w-full h-[400px] bg-gradient-to-br from-mint/20 to-coral/20 dark:from-mint/10 dark:to-coral/10 rounded-2xl shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 font-semibold text-center p-8 border-2 border-mint/30">
-                        Feature Screenshot<br/>Templates Gallery<br/>Categories<br/>(600x800)
+                    <div class="w-full h-[400px] bg-gradient-to-br from-mint/20 to-coral/20 dark:from-mint/10 dark:to-coral/10 rounded-2xl shadow-lg flex items-stretch justify-center overflow-hidden border-2 border-mint/50 dark:border-mint/40 relative">
+                        <!-- Light mode image -->
+                        <img src="assets/light/templates.png" alt="Smart Habit Templates Gallery" class="h-full w-auto object-contain dark:hidden">
+                        <!-- Dark mode image -->
+                        <img src="assets/dark/templates.png" alt="Smart Habit Templates Gallery" class="h-full w-auto object-contain hidden dark:block">
                     </div>
                 </div>
             </div>
@@ -208,8 +215,11 @@
                     </p>
                 </div>
                 <div>
-                    <div class="w-full h-[400px] bg-gradient-to-br from-purple/20 to-blue/20 dark:from-purple/10 dark:to-blue/10 rounded-2xl shadow-lg flex items-center justify-center text-gray-600 dark:text-gray-400 font-semibold text-center p-8 border-2 border-purple/30">
-                        Feature Screenshot<br/>Apple Watch App<br/>Habit List & Completion<br/>(600x800)
+                    <div class="w-full bg-gradient-to-br from-purple/20 to-blue/20 dark:from-purple/10 dark:to-blue/10 rounded-2xl shadow-lg overflow-hidden border-2 border-purple/30 flex items-center justify-center p-8">
+                        <!-- Light mode image -->
+                        <img src="assets/light/watch-mockup.png" alt="Apple Watch App - Habit List & Completion" class="w-full h-auto max-h-[400px] object-contain dark:hidden">
+                        <!-- Dark mode image -->
+                        <img src="assets/dark/watch-mockup.png" alt="Apple Watch App - Habit List & Completion" class="w-full h-auto max-h-[400px] object-contain hidden dark:block">
                     </div>
                 </div>
             </div>
