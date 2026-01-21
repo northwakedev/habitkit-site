@@ -79,6 +79,75 @@
             opacity: 0;
             animation: slideUp 0.8s ease-out forwards;
         }
+        
+        /* Core Concepts Section - Typography Variables */
+        :root {
+            /* Type Scale */
+            --pillar-headline-size: clamp(2.25rem, 4vw + 1rem, 3.75rem);
+            --pillar-body-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.375rem);
+            --pillar-kicker-size: clamp(1rem, 1.3vw + 0.4rem, 1.125rem);
+            
+            /* Spacing Scale */
+            --pillar-section-padding-block: clamp(6rem, 10vw, 10rem);
+            --pillar-headline-body-gap: clamp(3rem, 5vw, 4rem);
+            --pillar-body-paragraph-gap: clamp(1.5rem, 2.5vw, 1.75rem);
+            --pillar-kicker-gap: clamp(3rem, 4.5vw, 4rem);
+            --pillar-block-gap: clamp(10rem, 15vw, 14rem);
+            
+            /* Max Widths */
+            --pillar-headline-max-width: 60rem;
+            --pillar-body-max-width: 34rem;
+            --pillar-kicker-max-width: 32rem;
+            
+            /* Colors */
+            --pillar-headline-color: rgb(0 0 0);
+            --pillar-body-color: rgb(55 65 81);
+            --pillar-kicker-color: rgb(107 114 128);
+        }
+        
+        .dark {
+            --pillar-headline-color: rgb(255 255 255);
+            --pillar-body-color: rgb(209 213 219);
+            --pillar-kicker-color: rgb(107 114 128);
+        }
+        
+        /* Pillar Headlines */
+        .pillar-headline {
+            font-size: var(--pillar-headline-size);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            color: var(--pillar-headline-color);
+            max-width: var(--pillar-headline-max-width);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Pillar Body Text */
+        .pillar-body {
+            font-size: var(--pillar-body-size);
+            font-weight: 400;
+            letter-spacing: -0.005em;
+            line-height: 1.75;
+            color: var(--pillar-body-color);
+            max-width: var(--pillar-body-max-width);
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Pillar Kicker (closing line) */
+        .pillar-kicker {
+            font-size: var(--pillar-kicker-size);
+            font-weight: 400;
+            letter-spacing: 0.005em;
+            line-height: 1.6;
+            color: var(--pillar-kicker-color);
+            opacity: 0.9;
+            font-style: italic;
+            max-width: var(--pillar-kicker-max-width);
+            margin-left: auto;
+            margin-right: auto;
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-gray-100 transition-colors">
@@ -162,21 +231,21 @@
     <!-- ============================================ -->
     <!-- CORE CONCEPTS SECTION -->
     <!-- ============================================ -->
-    <section class="pt-24 pb-24 md:pt-32 md:pb-32 px-6 bg-white dark:bg-black">
-        <div class="max-w-7xl mx-auto">
+    <section class="px-6 bg-white dark:bg-black" style="padding-block: var(--pillar-section-padding-block);">
+        <div class="max-w-6xl mx-auto">
             <!-- Concept 1: Habits -->
-            <div class="text-center mb-32 md:mb-40 animate-on-scroll">
-                <h3 class="text-4xl md:text-5xl lg:text-6xl font-medium mb-10 md:mb-12 leading-tight max-w-4xl mx-auto">
+            <div class="text-center animate-on-scroll" style="margin-bottom: var(--pillar-block-gap);">
+                <h3 class="pillar-headline" style="margin-bottom: var(--pillar-headline-body-gap);">
                     Track simply. Go deeper if you want.
                 </h3>
-                <div class="max-w-2xl mx-auto space-y-6 text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                    <p>
+                <div>
+                    <p class="pillar-body" style="margin-bottom: var(--pillar-body-paragraph-gap);">
                         At its core, Habitori lets you track habits clearly and consistently. Check things off. See your progress. Build momentum.
                     </p>
-                    <p>
+                    <p class="pillar-body">
                         When you want more, it's there. You can add intent, reflect on why a habit matters, or use formation periods to understand how a behavior settles over time. Nothing is forced. Nothing is hidden.
                     </p>
-                    <p>
+                    <p class="pillar-kicker" style="margin-top: var(--pillar-kicker-gap);">
                         Start simple. Grow when you're ready.
                     </p>
                 </div>
@@ -184,14 +253,14 @@
             
             <!-- Concept 2: Privacy -->
             <div class="text-center animate-on-scroll">
-                <h3 class="text-4xl md:text-5xl lg:text-6xl font-medium mb-10 md:mb-12 leading-tight max-w-4xl mx-auto">
+                <h3 class="pillar-headline" style="margin-bottom: var(--pillar-headline-body-gap);">
                     Private by default
                 </h3>
-                <div class="max-w-2xl mx-auto space-y-6 text-lg md:text-xl text-gray-600 dark:text-gray-400 leading-relaxed">
-                    <p>
+                <div>
+                    <p class="pillar-body" style="margin-bottom: var(--pillar-body-paragraph-gap);">
                         Habitori works without an account. Your habits live on your device, not behind a login or tied to a profile. Nothing is shared, published, or analyzed.
                     </p>
-                    <p>
+                    <p class="pillar-body">
                         If you want backup, you can sync through your own iCloud. If you don't, you don't have to. That's it.
                     </p>
                 </div>
