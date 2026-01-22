@@ -112,8 +112,8 @@
         /* Pillar Headlines */
         .pillar-headline {
             font-size: var(--pillar-headline-size);
-            font-weight: 600;
-            letter-spacing: -0.035em;
+            font-weight: 500;
+            letter-spacing: -0.02em;
             line-height: 1.1;
             color: var(--pillar-headline-color);
             max-width: 48rem;
@@ -133,6 +133,12 @@
             margin-right: auto;
         }
         
+        /* Micro hierarchy for secondary paragraphs */
+        .pillar-body-secondary {
+            font-size: calc(var(--pillar-body-size) * 0.96);
+            opacity: 0.92;
+        }
+        
         /* Pillar Kicker (closing line) */
         .pillar-kicker {
             font-size: var(--pillar-kicker-size);
@@ -147,20 +153,39 @@
             margin-right: auto;
         }
         
-        /* Inverted colors for reversed background section */
-        .pillar-headline-inverted {
+        /* Privacy Stripe - Compressed Technical Section */
+        .privacy-stripe-headline {
+            font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
+            font-weight: 600;
+            letter-spacing: -0.03em;
+            line-height: 1.2;
             color: rgb(255 255 255);
+            max-width: 32rem;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .pillar-body-inverted {
+        .privacy-stripe-body {
+            font-size: clamp(1rem, 1.2vw + 0.4rem, 1.125rem);
+            font-weight: 400;
+            letter-spacing: -0.005em;
+            line-height: 1.65;
             color: rgb(229 231 235);
+            max-width: 28rem;
+            margin-left: auto;
+            margin-right: auto;
         }
         
-        .dark .pillar-headline-inverted {
+        .privacy-stripe-body-secondary {
+            font-size: clamp(0.9375rem, 1.15vw + 0.35rem, 1.0625rem);
+            opacity: 0.9;
+        }
+        
+        .dark .privacy-stripe-headline {
             color: rgb(0 0 0);
         }
         
-        .dark .pillar-body-inverted {
+        .dark .privacy-stripe-body {
             color: rgb(55 65 81);
         }
     </style>
@@ -246,7 +271,7 @@
     <!-- ============================================ -->
     <!-- CORE CONCEPTS SECTION -->
     <!-- ============================================ -->
-    <section class="px-6 bg-white dark:bg-black" style="padding-block: var(--pillar-section-padding-block);">
+    <section class="px-6 bg-white dark:bg-black" style="padding-block: clamp(3rem, 5vw, 4.5rem);">
         <div class="max-w-6xl mx-auto">
             <!-- Concept 1: Habits -->
             <div class="text-center animate-on-scroll" style="margin-bottom: var(--pillar-block-gap);">
@@ -257,7 +282,7 @@
                     <p class="pillar-body" style="margin-bottom: var(--pillar-body-paragraph-gap);">
                         Lasting habits don't form overnight. Progress is uneven. Motivation fades. Structure matters.
                     </p>
-                    <p class="pillar-body">
+                    <p class="pillar-body pillar-body-secondary">
                         Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks. The goal isn't perfect streaks. It's habits that hold when life doesn't.
                     </p>
                 </div>
@@ -265,19 +290,19 @@
         </div>
     </section>
     
-    <!-- Privacy Section - Reversed Background -->
-    <section class="bg-gray-900 dark:bg-gray-50 px-6" style="padding-block: clamp(5rem, 8vw, 8rem);">
+    <!-- Privacy Section - Technical Stripe -->
+    <section class="bg-black dark:bg-white px-6" style="padding-block: clamp(2.5rem, 4vw, 3.5rem);">
         <div class="max-w-6xl mx-auto">
             <!-- Concept 2: Privacy -->
             <div class="text-center animate-on-scroll">
-                <h3 class="pillar-headline pillar-headline-inverted" style="margin-bottom: var(--pillar-headline-body-gap);">
+                <h3 class="privacy-stripe-headline" style="margin-bottom: clamp(1.5rem, 2.5vw, 2rem);">
                     Private by default
                 </h3>
                 <div>
-                    <p class="pillar-body pillar-body-inverted" style="margin-bottom: var(--pillar-body-paragraph-gap);">
+                    <p class="privacy-stripe-body" style="margin-bottom: clamp(1.25rem, 1.8vw, 1.5rem);">
                         Habitori works without an account. Your habits live on your device, not behind a login or tied to a profile. Nothing is shared, published, or analyzed.
                     </p>
-                    <p class="pillar-body pillar-body-inverted">
+                    <p class="privacy-stripe-body privacy-stripe-body-secondary">
                         If you want backup, you can sync through your own iCloud. If you don't, you don't have to. That's it.
                     </p>
                 </div>
@@ -292,7 +317,7 @@
         <div class="max-w-7xl mx-auto">
             
             <!-- Feature 1: Smart Templates (Right Image, Left Text) -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 mt-20 animate-on-scroll">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 mt-28 animate-on-scroll">
                 <div>
                     <div class="flex items-center mb-2">
                         <div class="w-1.5 h-8 rounded-full mr-3" style="background-color: #51B8AF;"></div>
