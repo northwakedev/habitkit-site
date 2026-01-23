@@ -188,6 +188,71 @@
         .dark .privacy-stripe-body {
             color: rgb(55 65 81);
         }
+        
+        /* Privacy detail disclosure */
+        .privacy-detail-toggle {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 1.125rem;
+            height: 1.125rem;
+            margin-left: 0.5rem;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 0.75rem;
+            font-weight: 500;
+            font-style: italic;
+            cursor: pointer;
+            transition: background 0.2s ease;
+            vertical-align: middle;
+            border: none;
+        }
+        
+        .privacy-detail-toggle:hover {
+            background: rgba(255, 255, 255, 0.28);
+        }
+        
+        .dark .privacy-detail-toggle {
+            background: rgba(0, 0, 0, 0.12);
+            color: rgba(0, 0, 0, 0.65);
+        }
+        
+        .dark .privacy-detail-toggle:hover {
+            background: rgba(0, 0, 0, 0.18);
+        }
+        
+        .privacy-detail-content {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: all 0.3s ease;
+            margin-top: 0;
+        }
+        
+        .privacy-detail-content.expanded {
+            max-height: 200px;
+            opacity: 1;
+            margin-top: clamp(1.25rem, 1.8vw, 1.5rem);
+        }
+        
+        .privacy-detail-label {
+            font-size: clamp(0.875rem, 1.1vw + 0.35rem, 1rem);
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            color: rgb(229 231 235);
+            opacity: 0.85;
+            margin-bottom: 0.5rem;
+        }
+        
+        .dark .privacy-detail-label {
+            color: rgb(55 65 81);
+            opacity: 0.9;
+        }
+        
+        .privacy-detail-content .privacy-stripe-body-secondary {
+            opacity: 0.75;
+        }
     </style>
 </head>
 <body class="bg-gray-50 dark:bg-black text-gray-900 dark:text-gray-100 transition-colors">
@@ -299,12 +364,19 @@
                     Private by default
                 </h3>
                 <div>
-                    <p class="privacy-stripe-body" style="margin-bottom: clamp(1.25rem, 1.8vw, 1.5rem);">
-                        Habitori works without an account. Your habits live on your device, not behind a login or tied to a profile. Nothing is shared, published, or analyzed.
+                    <p class="privacy-stripe-body">
+                        Habitori works without an account. Your habits live on your device, not behind a login or tied to a profile. Nothing is shared, published, or analyzed.<button 
+                            class="privacy-detail-toggle" 
+                            onclick="this.parentElement.nextElementSibling.classList.toggle('expanded')"
+                            aria-label="Toggle sync details"
+                        >i</button>
                     </p>
-                    <p class="privacy-stripe-body privacy-stripe-body-secondary">
-                        If you want backup, you can sync through your own iCloud. If you don't, you don't have to. That's it.
-                    </p>
+                    <div class="privacy-detail-content">
+                        <p class="privacy-detail-label">iCloud sync supported</p>
+                        <p class="privacy-stripe-body privacy-stripe-body-secondary">
+                            If you want backup, you can sync through your own iCloud. If you don't, you don't have to. That's it.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
