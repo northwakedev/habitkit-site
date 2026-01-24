@@ -83,74 +83,87 @@
         /* Core Concepts Section - Typography Variables */
         :root {
             /* Type Scale */
-            --pillar-headline-size: clamp(2.25rem, 4vw + 1rem, 3.75rem);
-            --pillar-body-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.375rem);
-            --pillar-kicker-size: clamp(1rem, 1.3vw + 0.4rem, 1.125rem);
+            --pillar-headline-size: clamp(2rem, 3.2vw + 0.8rem, 3rem);
+            --pillar-body-size: clamp(1.0625rem, 1.4vw + 0.5rem, 1.25rem);
+            --pillar-kicker-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.3125rem);
             
-            /* Spacing Scale */
+            /* Spacing Scale - Proportional System */
             --pillar-section-padding-block: clamp(4rem, 6vw, 6rem);
-            --pillar-headline-body-gap: clamp(2rem, 3vw, 2.5rem);
-            --pillar-body-paragraph-gap: clamp(1.5rem, 2vw, 1.75rem);
-            --pillar-kicker-gap: clamp(3rem, 4.5vw, 4rem);
+            --pillar-headline-body-gap: clamp(2.5rem, 4vw, 3.5rem);
+            --pillar-body-paragraph-gap: clamp(1.75rem, 2.5vw, 2.25rem);
+            --pillar-kicker-gap: clamp(2.5rem, 3.5vw, 3rem);
             --pillar-block-gap: clamp(0rem, 0vw, 0rem);
             
             /* Max Widths */
-            --pillar-kicker-max-width: 32rem;
+            --pillar-headline-max-width: 22ch;
+            --pillar-body-max-width: 52ch;
+            --pillar-body-secondary-max-width: 54ch;
+            --pillar-kicker-max-width: 36ch;
             
-            /* Colors */
-            --pillar-headline-color: rgb(0 0 0);
-            --pillar-body-color: rgb(55 65 81);
+            /* Colors - Premium Monochrome Palette */
+            --pillar-headline-color: rgb(15 15 15);
+            --pillar-body-color: rgb(38 38 38);
+            --pillar-body-secondary-color: rgb(75 85 99);
             --pillar-kicker-color: rgb(107 114 128);
         }
         
         .dark {
-            --pillar-headline-color: rgb(255 255 255);
-            --pillar-body-color: rgb(209 213 219);
+            --pillar-headline-color: rgb(250 250 250);
+            --pillar-body-color: rgb(229 231 235);
+            --pillar-body-secondary-color: rgb(189 195 204);
             --pillar-kicker-color: rgb(107 114 128);
         }
         
         /* Pillar Headlines */
         .pillar-headline {
             font-size: var(--pillar-headline-size);
-            font-weight: 500;
-            letter-spacing: -0.02em;
-            line-height: 1.1;
+            font-weight: 600;
+            letter-spacing: -0.01em;
+            line-height: 1.15;
             color: var(--pillar-headline-color);
-            max-width: 48rem;
+            max-width: var(--pillar-headline-max-width);
             margin-left: auto;
             margin-right: auto;
+            text-wrap: balance;
         }
         
         /* Pillar Body Text */
         .pillar-body {
             font-size: var(--pillar-body-size);
             font-weight: 400;
-            letter-spacing: -0.008em;
-            line-height: 1.7;
+            letter-spacing: 0.01em;
+            line-height: 1.6;
             color: var(--pillar-body-color);
-            max-width: 40rem;
+            max-width: var(--pillar-body-max-width);
             margin-left: auto;
             margin-right: auto;
+            text-wrap: pretty;
         }
         
         /* Micro hierarchy for secondary paragraphs */
         .pillar-body-secondary {
-            font-size: calc(var(--pillar-body-size) * 0.96);
-            opacity: 0.92;
+            font-size: calc(var(--pillar-body-size) * 0.94);
+            line-height: 1.85;
+            color: var(--pillar-body-secondary-color);
+            opacity: 0.88;
+            max-width: var(--pillar-body-secondary-max-width);
+            text-wrap: pretty;
         }
         
         /* Pillar Kicker (closing line) */
         .pillar-kicker {
             font-size: var(--pillar-kicker-size);
-            font-weight: 400;
-            letter-spacing: 0.005em;
-            line-height: 1.6;
-            color: var(--pillar-kicker-color);
-            opacity: 0.9;
-            font-style: italic;
+            font-weight: 500;
+            letter-spacing: 0.01em;
+            line-height: 1.65;
+            color: var(--pillar-headline-color);
+            opacity: 0.95;
+            font-style: normal;
             max-width: var(--pillar-kicker-max-width);
             margin-left: auto;
             margin-right: auto;
+            margin-top: var(--pillar-kicker-gap);
+            text-wrap: balance;
         }
         
         /* Privacy Stripe - Compressed Technical Section */
@@ -346,19 +359,19 @@
     <!-- ============================================ -->
     <!-- CORE CONCEPTS SECTION -->
     <!-- ============================================ -->
-    <section class="px-6 bg-white dark:bg-black" style="padding-block: clamp(3rem, 5vw, 4.5rem);">
+    <section class="px-6 bg-white dark:bg-black" style="padding-block: var(--pillar-section-padding-block);">
         <div class="max-w-6xl mx-auto">
             <!-- Concept 1: Habits -->
             <div class="text-center animate-on-scroll" style="margin-bottom: var(--pillar-block-gap);">
                 <h3 class="pillar-headline" style="margin-bottom: var(--pillar-headline-body-gap);">
-                    Change takes time
+                    Real change isn't dramatic.<br>It's consistent.
                 </h3>
                 <div>
                     <p class="pillar-body" style="margin-bottom: var(--pillar-body-paragraph-gap);">
-                        Lasting habits don't form overnight. Progress is uneven. Motivation fades. Structure matters.
+                        Lasting habits don't form overnight. Progress is uneven.<br>Motivation fades. Structure matters.
                     </p>
-                    <p class="pillar-body pillar-body-secondary">
-                        Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks. The goal isn't perfect streaks. It's habits that hold when life doesn't.
+                    <p class="pillar-body" style="color: var(--pillar-body-secondary-color);">
+                        Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks. <span style="display: inline; margin: 0 !important; margin-top: 0 !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; font-size: var(--pillar-body-size); font-weight: 400; letter-spacing: 0.01em; line-height: 1.6; color: var(--pillar-headline-color); opacity: 0.95;">The goal isn't perfect streaks. It's habits that hold when life doesn't.</span>
                     </p>
                 </div>
             </div>
