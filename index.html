@@ -248,21 +248,31 @@
             opacity: 1;
             margin-top: clamp(1.5rem, 2.2vw, 1.875rem);
             padding-top: clamp(1rem, 1.5vw, 1.25rem);
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
         }
         
-        .dark .privacy-detail-content.expanded {
-            border-top-color: rgba(0, 0, 0, 0.08);
+        .privacy-detail-content.expanded::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: clamp(8rem, 15vw, 12rem);
+            height: 1px;
+            background: rgba(255, 255, 255, 0.1);
+        }
+        
+        .dark .privacy-detail-content.expanded::before {
+            background: rgba(0, 0, 0, 0.08);
         }
         
         .privacy-detail-label {
-            font-size: clamp(0.8125rem, 1.05vw + 0.3rem, 0.9375rem);
+            font-size: clamp(0.75rem, 0.95vw + 0.25rem, 0.8125rem);
             font-weight: 500;
             letter-spacing: 0.01em;
             color: rgb(229 231 235);
             opacity: 0.7;
             margin-bottom: 0.625rem;
-            text-transform: uppercase;
         }
         
         .dark .privacy-detail-label {
@@ -271,10 +281,10 @@
         }
         
         .privacy-detail-content .privacy-stripe-body-secondary {
-            font-size: clamp(0.875rem, 1.1vw + 0.35rem, 1rem);
+            font-size: clamp(0.8125rem, 1vw + 0.3rem, 0.875rem);
             opacity: 0.65;
             line-height: 1.7;
-            font-style: italic;
+            font-style: normal;
         }
     </style>
 </head>
@@ -329,20 +339,20 @@
         <div class="relative z-10 min-h-screen flex items-center px-6 py-20">
             <div class="max-w-xl lg:ml-12 xl:ml-24">
                 <!-- App Icon -->
-                <div class="flex justify-center lg:justify-start mb-6 animate-fade-in">
-                    <img src="assets/habitkit-icon.png" alt="Habitori App Icon" class="w-24 h-24 rounded-2xl">
+                <div class="flex justify-center md:justify-start mb-6 animate-fade-in">
+                    <img src="assets/habitkit-icon.png" alt="Habitori App Icon" class="w-20 h-20 rounded-2xl">
                 </div>
                 
-                <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-snug text-center lg:text-left animate-fade-in">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6 leading-snug text-center md:text-left animate-fade-in">
                     <span class="block bg-gradient-to-r from-purple/80 via-blue to-purple bg-clip-text text-transparent font-semibold text-[1.625rem] md:text-[2.5rem] pb-1">Stop postponing</span>
                     <span class="block bg-gradient-to-r from-coral via-mint to-green bg-clip-text text-transparent pb-1">Start becoming</span>
                 </h2>
-                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-lg mb-8 mx-auto lg:mx-0 text-center lg:text-left leading-relaxed animate-fade-in">
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-md mb-8 mx-auto lg:mx-0 text-center md:text-left leading-relaxed animate-fade-in">
                     A private system for real change. For the habits you've tried before, the ones you keep putting off, and the person you're ready to become.
                 </p>
                 
                 <!-- App Store Button -->
-                <div class="flex justify-center lg:justify-start animate-fade-in">
+                <div class="flex justify-center md:justify-start animate-fade-in">
                     <a href="https://apps.apple.com/app/habitkit" class="inline-block bg-black dark:bg-white text-white dark:text-black px-8 py-4 rounded-xl font-semibold hover:opacity-90 transition shadow-lg hover:shadow-xl text-lg">
                         <span class="flex items-center gap-3">
                             <svg class="w-8 h-8" viewBox="0 0 24 24" fill="currentColor">
@@ -371,7 +381,7 @@
                         Lasting habits don't form overnight. Progress is uneven.<br>Motivation fades. Structure matters.
                     </p>
                     <p class="pillar-body" style="color: var(--pillar-body-secondary-color);">
-                        Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks. <span style="display: inline; margin: 0 !important; margin-top: 0 !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; font-size: var(--pillar-body-size); font-weight: 400; letter-spacing: 0.01em; line-height: 1.6; color: var(--pillar-headline-color); opacity: 0.95;">The goal isn't perfect streaks. It's habits that hold when life doesn't.</span>
+                        Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks.<br> <span style="display: inline; margin: 0 !important; margin-top: 0 !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; font-size: var(--pillar-body-size); font-weight: 500; letter-spacing: 0.01em; line-height: 1.6; color: var(--pillar-headline-color); opacity: 0.90;">The goal isn't perfect streaks. It's habits that hold when life doesn't.</span>
                     </p>
                 </div>
             </div>
@@ -397,7 +407,7 @@
                     <div class="privacy-detail-content">
                         <p class="privacy-detail-label">iCloud sync supported</p>
                         <p class="privacy-stripe-body privacy-stripe-body-secondary">
-                            If you want backup, you can sync through your own iCloud. If you don't, you don't have to. That's it.
+                            If you want backup, you can sync through your own iCloud.<br>If you don't, you don't have to. That's it.
                         </p>
                     </div>
                 </div>
