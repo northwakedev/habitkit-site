@@ -40,6 +40,9 @@
                         purple: '#9B59B6',
                         yellow: '#FFD93D'
                     },
+                    fontFamily: {
+                        'habitori': ['JetBrains Mono', 'monospace']
+                    },
                     animation: {
                         'fade-in': 'fadeIn 0.8s ease-out forwards',
                         'slide-up': 'slideUp 0.8s ease-out forwards',
@@ -67,225 +70,6 @@
             font-weight: 600;
             font-style: normal;
         }
-        
-        /* Habitori font class */
-        .font-habitori {
-            font-family: 'JetBrains Mono', monospace;
-            font-weight: 600;
-        }
-        
-        /* Smooth animations */
-        .animate-on-scroll {
-            opacity: 0;
-            animation: slideUp 0.8s ease-out forwards;
-        }
-        
-        /* Core Concepts Section - Typography Variables */
-        :root {
-            /* Type Scale */
-            --pillar-headline-size: clamp(2rem, 3.2vw + 0.8rem, 3rem);
-            --pillar-body-size: clamp(1.0625rem, 1.4vw + 0.5rem, 1.25rem);
-            --pillar-kicker-size: clamp(1.125rem, 1.5vw + 0.5rem, 1.3125rem);
-            
-            /* Spacing Scale - Proportional System */
-            --pillar-section-padding-block: clamp(4rem, 6vw, 6rem);
-            --pillar-headline-body-gap: clamp(2.5rem, 4vw, 3.5rem);
-            --pillar-body-paragraph-gap: clamp(1.75rem, 2.5vw, 2.25rem);
-            --pillar-kicker-gap: clamp(2.5rem, 3.5vw, 3rem);
-            --pillar-block-gap: clamp(0rem, 0vw, 0rem);
-            
-            /* Max Widths */
-            --pillar-headline-max-width: 22ch;
-            --pillar-body-max-width: 52ch;
-            --pillar-body-secondary-max-width: 54ch;
-            --pillar-kicker-max-width: 36ch;
-            
-            /* Colors - Premium Monochrome Palette */
-            --pillar-headline-color: rgb(15 15 15);
-            --pillar-body-color: rgb(38 38 38);
-            --pillar-body-secondary-color: rgb(75 85 99);
-            --pillar-kicker-color: rgb(107 114 128);
-        }
-        
-        .dark {
-            --pillar-headline-color: rgb(250 250 250);
-            --pillar-body-color: rgb(229 231 235);
-            --pillar-body-secondary-color: rgb(189 195 204);
-            --pillar-kicker-color: rgb(107 114 128);
-        }
-        
-        /* Pillar Headlines */
-        .pillar-headline {
-            font-size: var(--pillar-headline-size);
-            font-weight: 600;
-            letter-spacing: -0.01em;
-            line-height: 1.15;
-            color: var(--pillar-headline-color);
-            max-width: var(--pillar-headline-max-width);
-            margin-left: auto;
-            margin-right: auto;
-            text-wrap: balance;
-        }
-        
-        /* Pillar Body Text */
-        .pillar-body {
-            font-size: var(--pillar-body-size);
-            font-weight: 400;
-            letter-spacing: 0.01em;
-            line-height: 1.6;
-            color: var(--pillar-body-color);
-            max-width: var(--pillar-body-max-width);
-            margin-left: auto;
-            margin-right: auto;
-            text-wrap: pretty;
-        }
-        
-        /* Micro hierarchy for secondary paragraphs */
-        .pillar-body-secondary {
-            font-size: calc(var(--pillar-body-size) * 0.94);
-            line-height: 1.85;
-            color: var(--pillar-body-secondary-color);
-            opacity: 0.88;
-            max-width: var(--pillar-body-secondary-max-width);
-            text-wrap: pretty;
-        }
-        
-        /* Pillar Kicker (closing line) */
-        .pillar-kicker {
-            font-size: var(--pillar-kicker-size);
-            font-weight: 500;
-            letter-spacing: 0.01em;
-            line-height: 1.65;
-            color: var(--pillar-headline-color);
-            opacity: 0.95;
-            font-style: normal;
-            max-width: var(--pillar-kicker-max-width);
-            margin-left: auto;
-            margin-right: auto;
-            margin-top: var(--pillar-kicker-gap);
-            text-wrap: balance;
-        }
-        
-        /* Privacy Stripe - Compressed Technical Section */
-        .privacy-stripe-headline {
-            font-size: clamp(1.75rem, 3vw + 0.5rem, 2.5rem);
-            font-weight: 600;
-            letter-spacing: -0.03em;
-            line-height: 1.2;
-            color: rgb(255 255 255);
-            max-width: 32rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .privacy-stripe-body {
-            font-size: clamp(1rem, 1.2vw + 0.4rem, 1.125rem);
-            font-weight: 400;
-            letter-spacing: -0.005em;
-            line-height: 1.65;
-            color: rgb(229 231 235);
-            max-width: 28rem;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .privacy-stripe-body-secondary {
-            font-size: clamp(0.9375rem, 1.15vw + 0.35rem, 1.0625rem);
-            opacity: 0.9;
-        }
-        
-        .dark .privacy-stripe-headline {
-            color: rgb(0 0 0);
-        }
-        
-        .dark .privacy-stripe-body {
-            color: rgb(55 65 81);
-        }
-        
-        /* Privacy detail disclosure */
-        .privacy-detail-toggle {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 1.125rem;
-            height: 1.125rem;
-            margin-left: 0.5rem;
-            border-radius: 50%;
-            background: rgba(255, 255, 255, 0.2);
-            color: rgba(255, 255, 255, 0.85);
-            font-size: 0.75rem;
-            font-weight: 500;
-            font-style: italic;
-            cursor: pointer;
-            transition: background 0.2s ease;
-            vertical-align: middle;
-            border: none;
-        }
-        
-        .privacy-detail-toggle:hover {
-            background: rgba(255, 255, 255, 0.28);
-        }
-        
-        .dark .privacy-detail-toggle {
-            background: rgba(0, 0, 0, 0.12);
-            color: rgba(0, 0, 0, 0.65);
-        }
-        
-        .dark .privacy-detail-toggle:hover {
-            background: rgba(0, 0, 0, 0.18);
-        }
-        
-        .privacy-detail-content {
-            max-height: 0;
-            overflow: hidden;
-            opacity: 0;
-            transition: all 0.3s ease;
-            margin-top: 0;
-        }
-        
-        .privacy-detail-content.expanded {
-            max-height: 200px;
-            opacity: 1;
-            margin-top: clamp(1.5rem, 2.2vw, 1.875rem);
-            padding-top: clamp(1rem, 1.5vw, 1.25rem);
-            position: relative;
-        }
-        
-        .privacy-detail-content.expanded::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: clamp(8rem, 15vw, 12rem);
-            height: 1px;
-            background: rgba(255, 255, 255, 0.1);
-        }
-        
-        .dark .privacy-detail-content.expanded::before {
-            background: rgba(0, 0, 0, 0.08);
-        }
-        
-        .privacy-detail-label {
-            font-size: clamp(0.75rem, 0.95vw + 0.25rem, 0.8125rem);
-            font-weight: 500;
-            letter-spacing: 0.01em;
-            color: rgb(229 231 235);
-            opacity: 0.7;
-            margin-bottom: 0.625rem;
-        }
-        
-        .dark .privacy-detail-label {
-            color: rgb(55 65 81);
-            opacity: 0.75;
-        }
-        
-        .privacy-detail-content .privacy-stripe-body-secondary {
-            font-size: clamp(0.8125rem, 1vw + 0.3rem, 0.875rem);
-            opacity: 0.65;
-            line-height: 1.7;
-            font-style: normal;
-        }
     </style>
 </head>
 <body class="bg-[#F8F9FB] dark:bg-[#111318] text-gray-900 dark:text-gray-100 transition-colors">
@@ -293,9 +77,9 @@
     <!-- Top Bar - Fixed position with subtle fade -->
     <div class="fixed top-0 left-0 right-0 z-50 h-32 pointer-events-none">
         <!-- Light mode gradient -->
-        <div class="absolute inset-0 dark:hidden" style="background: linear-gradient(to bottom, #F8F9FB 0%, rgba(248, 249, 251, 0.5) 40%, transparent 100%);"></div>
+        <div class="absolute inset-0 dark:hidden bg-gradient-to-b from-[#F8F9FB] via-[#F8F9FB]/50 to-transparent"></div>
         <!-- Dark mode gradient -->
-        <div class="absolute inset-0 hidden dark:block" style="background: linear-gradient(to bottom, #111318 0%, rgba(17, 19, 24, 0.5) 40%, transparent 100%);"></div>
+        <div class="absolute inset-0 hidden dark:block bg-gradient-to-b from-[#111318] via-[#111318]/50 to-transparent"></div>
         <!-- Content -->
         <div class="relative px-6 py-5 flex items-center justify-between pointer-events-auto">
             <!-- Habitori Logo/Text - Left Side -->
@@ -370,19 +154,19 @@
     <!-- ============================================ -->
     <!-- CORE CONCEPTS SECTION -->
     <!-- ============================================ -->
-    <section class="px-6 bg-[#F8F9FB] dark:bg-[#111318]" style="padding-block: var(--pillar-section-padding-block);">
+    <section class="px-6 py-16 md:py-20 lg:py-24 bg-[#F8F9FB] dark:bg-[#111318]">
         <div class="max-w-6xl mx-auto">
             <!-- Concept 1: Habits -->
-            <div class="text-center animate-on-scroll" style="margin-bottom: var(--pillar-block-gap);">
-                <h3 class="pillar-headline" style="margin-bottom: var(--pillar-headline-body-gap);">
+            <div class="text-center opacity-0 transition-all duration-800 ease-out" data-animate>
+                <h3 class="text-[clamp(2rem,3.2vw+0.8rem,3rem)] font-semibold tracking-[-0.01em] leading-[1.15] text-[rgb(15,15,15)] dark:text-[rgb(250,250,250)] max-w-[22ch] mx-auto mb-10 md:mb-12 lg:mb-14">
                     Real change isn't dramatic.<br>It's consistent.
                 </h3>
                 <div>
-                    <p class="pillar-body" style="margin-bottom: var(--pillar-body-paragraph-gap);">
+                    <p class="text-[clamp(1.0625rem,1.4vw+0.5rem,1.25rem)] font-normal tracking-[0.01em] leading-[1.6] text-[rgb(38,38,38)] dark:text-[rgb(229,231,235)] max-w-[52ch] mx-auto mb-7 md:mb-8 lg:mb-9">
                         Lasting habits don't form overnight. Progress is uneven.<br>Motivation fades. Structure matters.
                     </p>
-                    <p class="pillar-body" style="color: var(--pillar-body-secondary-color);">
-                        Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks.<br> <span style="display: inline; margin: 0 !important; margin-top: 0 !important; max-width: none !important; margin-left: 0 !important; margin-right: 0 !important; font-size: var(--pillar-body-size); font-weight: 500; letter-spacing: 0.01em; line-height: 1.6; color: var(--pillar-headline-color); opacity: 0.90;">The goal isn't perfect streaks. It's habits that hold when life doesn't.</span>
+                    <p class="text-[clamp(1.0625rem,1.4vw+0.5rem,1.25rem)] font-normal tracking-[0.01em] leading-[1.6] text-gray-600 dark:text-[rgb(189,195,204)] max-w-[52ch] mx-auto">
+                        Habitori is built around that reality. It respects the slow parts, the plateaus, and the work between the checkmarks.<br><span class="inline font-medium text-[rgb(15,15,15)] dark:text-[rgb(250,250,250)] opacity-90">The goal isn't perfect streaks. It's habits that hold when life doesn't.</span>
                     </p>
                 </div>
             </div>
@@ -390,26 +174,28 @@
     </section>
     
     <!-- Privacy Section - Technical Stripe -->
-    <section class="bg-[#111318] dark:bg-[#F8F9FB] px-6" style="padding-block: clamp(2.5rem, 4vw, 3.5rem);">
+    <section class="bg-[#111318] dark:bg-[#F8F9FB] px-6 py-10 md:py-12 lg:py-14">
         <div class="max-w-6xl mx-auto">
             <!-- Concept 2: Privacy -->
-            <div class="text-center animate-on-scroll">
-                <h3 class="privacy-stripe-headline" style="margin-bottom: clamp(1.5rem, 2.5vw, 2rem);">
+            <div class="text-center opacity-0 transition-all duration-800 ease-out" data-animate>
+                <h3 class="text-[clamp(1.75rem,3vw+0.5rem,2.5rem)] font-semibold tracking-[-0.03em] leading-[1.2] text-white dark:text-black max-w-[32rem] mx-auto mb-6 md:mb-8">
                     Private by default
                 </h3>
                 <div>
-                    <p class="privacy-stripe-body">
+                    <p class="text-[clamp(1rem,1.2vw+0.4rem,1.125rem)] font-normal tracking-[-0.005em] leading-[1.65] text-gray-200 dark:text-gray-700 max-w-[28rem] mx-auto">
                         Habitori works without an account. Your habits live on your device, not behind a login or tied to a profile. Nothing is shared, published, or analyzed.<button 
-                            class="privacy-detail-toggle" 
-                            onclick="this.parentElement.nextElementSibling.classList.toggle('expanded')"
+                            class="inline-flex items-center justify-center w-[1.125rem] h-[1.125rem] ml-2 rounded-full bg-white/20 dark:bg-black/12 hover:bg-white/[0.28] dark:hover:bg-black/[0.18] text-white/85 dark:text-black/65 text-xs font-medium italic cursor-pointer transition-colors duration-200 align-middle border-0" 
+                            onclick="this.parentElement.nextElementSibling.classList.toggle('max-h-[200px]'); this.parentElement.nextElementSibling.classList.toggle('opacity-100'); this.parentElement.nextElementSibling.classList.toggle('mt-6'); this.parentElement.nextElementSibling.classList.toggle('pt-4');"
                             aria-label="Toggle sync details"
                         >i</button>
                     </p>
-                    <div class="privacy-detail-content">
-                        <p class="privacy-detail-label">iCloud sync supported</p>
-                        <p class="privacy-stripe-body privacy-stripe-body-secondary">
-                            If you want backup, you can sync through your own iCloud.<br>If you don't, you don't have to. That's it.
-                        </p>
+                    <div class="max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out mt-0 relative">
+                        <div class="before:content-[''] before:absolute before:top-0 before:left-1/2 before:-translate-x-1/2 before:w-[clamp(8rem,15vw,12rem)] before:h-px before:bg-white/10 dark:before:bg-black/[0.08]">
+                            <p class="text-[clamp(0.75rem,0.95vw+0.25rem,0.8125rem)] font-medium tracking-[0.01em] text-gray-200 dark:text-gray-700 opacity-70 dark:opacity-75 mb-2.5 pt-4">iCloud sync supported</p>
+                            <p class="text-[clamp(0.8125rem,1vw+0.3rem,0.875rem)] font-normal tracking-[-0.005em] leading-[1.7] text-gray-200 dark:text-gray-700 opacity-90 max-w-[28rem] mx-auto">
+                                If you want backup, you can sync through your own iCloud.<br>If you don't, you don't have to. That's it.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -423,7 +209,7 @@
         <div class="max-w-7xl mx-auto">
             
             <!-- Feature 1: Smart Templates (Right Image, Left Text) -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 mt-28 animate-on-scroll">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 mt-28 opacity-0 transition-all duration-800 ease-out" data-animate>
                 <div>
                     <div class="flex items-center mb-2">
                         <h3 class="text-4xl font-extrabold">Start with a template. Make it yours.</h3>
@@ -446,7 +232,7 @@
             </div>
             
             <!-- Feature 5: Visual Progress (Left Image, Right Text) -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-on-scroll">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 opacity-0 transition-all duration-800 ease-out" data-animate>
                 <div class="order-2 lg:order-1">
                     <div class="w-full h-[400px] bg-gradient-to-br from-green/20 to-mint/20 dark:from-green/10 dark:to-mint/10 rounded-2xl shadow-lg flex items-end justify-center overflow-hidden border-2 border-green/30 relative">
                         <!-- Light mode image -->
@@ -469,7 +255,7 @@
             </div>
             
             <!-- Feature 4: Track on Your Wrist - Apple Watch (Right Image, Left Text) -->
-            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 animate-on-scroll">
+            <div class="grid lg:grid-cols-2 gap-12 items-center mb-24 opacity-0 transition-all duration-800 ease-out" data-animate>
                 <div>
                     <div class="flex items-center mb-2">
                         <h3 class="text-4xl font-extrabold">Stay on track. Without pulling out your phone.</h3>
@@ -612,10 +398,8 @@
             });
         }, observerOptions);
         
-        document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-            el.style.opacity = '0';
+        document.querySelectorAll('[data-animate]').forEach((el) => {
             el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.8s ease-out, transform 0.8s ease-out';
             observer.observe(el);
         });
     </script>
