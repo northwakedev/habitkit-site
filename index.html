@@ -34,6 +34,124 @@
             font-weight: 600;
             font-style: normal;
         }
+        
+        /* Animated gradient morph for CTA section */
+        .gradient-morph {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .gradient-morph::before,
+        .gradient-morph::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+        }
+        
+        /* Gradient 1: Coral → Mint → Green (Start becoming) - always visible as base */
+        .gradient-morph::before {
+            background: linear-gradient(135deg, 
+                #FF6B6B 0%, 
+                #E87B8A 12%,
+                #D08BA3 24%,
+                #4ECDC4 45%, 
+                #3DD9A0 65%,
+                #22C55E 100%
+            );
+            background-size: 200% 200%;
+            animation: gradientShift1 45s ease-in-out infinite;
+        }
+        
+        /* Gradient 2: Purple → Blue → Teal (Stop postponing) - blends on top */
+        .gradient-morph::after {
+            background: linear-gradient(135deg, 
+                #A855F7 0%, 
+                #8B5CF6 18%,
+                #6366F1 35%,
+                #3B82F6 50%, 
+                #0EA5E9 70%,
+                #14B8A6 100%
+            );
+            background-size: 200% 200%;
+            animation: gradientShift2 50s ease-in-out infinite, gradientFade 30s ease-in-out infinite;
+        }
+        
+        /* Slow, gentle gradient position drift */
+        @keyframes gradientShift1 {
+            0%, 100% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+        }
+        
+        @keyframes gradientShift2 {
+            0%, 100% {
+                background-position: 100% 50%;
+            }
+            50% {
+                background-position: 0% 50%;
+            }
+        }
+        
+        /* Very gentle crossfade - always shows blend of both, never fully one or the other */
+        @keyframes gradientFade {
+            0%, 100% {
+                opacity: 0.25;
+            }
+            50% {
+                opacity: 0.7;
+            }
+        }
+        
+        /* Subtle floating glow accents */
+        .gradient-morph-glow {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        
+        .gradient-morph-glow::before,
+        .gradient-morph-glow::after {
+            content: '';
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.25;
+            animation: float 60s ease-in-out infinite;
+        }
+        
+        .gradient-morph-glow::before {
+            width: 50%;
+            height: 70%;
+            background: rgba(139, 92, 246, 0.4);
+            top: -25%;
+            left: -15%;
+            animation-delay: 0s;
+        }
+        
+        .gradient-morph-glow::after {
+            width: 45%;
+            height: 60%;
+            background: rgba(78, 205, 196, 0.4);
+            bottom: -25%;
+            right: -15%;
+            animation-delay: -30s;
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translate(0, 0) scale(1);
+            }
+            33% {
+                transform: translate(8%, 10%) scale(1.05);
+            }
+            66% {
+                transform: translate(-5%, -8%) scale(0.98);
+            }
+        }
     </style>
 </head>
 <body class="bg-[#F8F9FB] dark:bg-[#111318] text-gray-900 dark:text-gray-100 transition-colors">
@@ -255,8 +373,11 @@
     <!-- ============================================ -->
     <!-- FINAL CTA SECTION -->
     <!-- ============================================ -->
-    <section class="py-32 px-6 bg-gradient-to-br from-coral via-mint to-green relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/10"></div>
+    <section class="py-32 px-6 relative overflow-hidden gradient-morph">
+        <!-- Floating glow orbs -->
+        <div class="gradient-morph-glow"></div>
+        <!-- Subtle overlay for text readability -->
+        <div class="absolute inset-0 bg-black/5 z-[1]"></div>
         <div class="max-w-4xl mx-auto text-center relative z-10">
             <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
                 Your next chapter starts with day one.
