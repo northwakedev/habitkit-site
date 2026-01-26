@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitori - Principles</title>
+    <meta name="description" content="The philosophy behind Habitori - Japanese principles that guide how we build a calm, patient habit tracker">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/habitkit-icon.png">
+    <link rel="apple-touch-icon" href="assets/habitkit-icon.png">
+    
+    <!-- Shared Tailwind Configuration -->
+    <script src="css/tailwind-config.js"></script>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = window.tailwindConfig;
+    </script>
+    <style>
+        /* Load JetBrains Mono SemiBold font */
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('assets/font/JetBrainsMono-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F9FB] dark:bg-[#111318] text-gray-900 dark:text-gray-100 transition-colors">
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
+    <!-- Theme Toggle Button - Fixed position top right -->
+    <button 
+        id="theme-toggle" 
+        class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700"
+        aria-label="Toggle dark mode"
+    >
+        <svg id="sun-icon" class="w-6 h-6 text-gray-800 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="moon-icon" class="w-6 h-6 text-gray-200 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <!-- Back Button -->
+    <div class="max-w-4xl mx-auto pt-20 pb-4 px-6">
+        <a href="index.html" class="inline-flex items-center gap-2 text-blue hover:text-mint transition-colors font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+        </a>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main">
+    <section class="py-8 px-6 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="mb-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-coral via-mint to-green bg-clip-text text-transparent">
+                    Principles behind Habitori
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    We believe people have far more potential than they are currently able to use.
+                </p>
+            </div>
+
+            <!-- Philosophy Introduction -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-12 border border-gray-200 dark:border-gray-700">
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Habitori is built on the idea that technology should help unlock that potential, not extract from it. Not through pressure or motivation tricks, but through calm structure, patience, and respect for human limits.
+                </p>
+                <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Much of this thinking aligns with long-standing Japanese principles. We treat them as quiet pillars, not slogans.
+                </p>
+            </div>
+
+            <!-- Principles Grid -->
+            <div class="space-y-6">
+                
+                <!-- Kaizen -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-coral/50 dark:hover:border-coral/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-coral/80 dark:text-coral/70">改善</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Kaizen</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Small, continuous improvement. Habits grow through consistency, not intensity.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gaman -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-mint/50 dark:hover:border-mint/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-mint/80 dark:text-mint/70">我慢</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Gaman</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Endurance with dignity. Habits are built through staying power, not motivation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wabi-sabi -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-green/50 dark:hover:border-green/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-green/80 dark:text-green/70">侘寂</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Wabi-sabi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Acceptance of imperfection. Habits do not need to be flawless to matter.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kintsugi -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-purple/50 dark:hover:border-purple/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-purple/80 dark:text-purple/70">金継ぎ</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Kintsugi</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Repair, not reset. Missed days add history, not failure.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Omoiyari -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-blue/50 dark:hover:border-blue/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-blue/80 dark:text-blue/70">思いやり</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Omoiyari</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Consideration and empathy. Habitori is designed to be kind, not punishing.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shoshin -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-coral/50 dark:hover:border-coral/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-coral/80 dark:text-coral/70">初心</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Shoshin</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Beginner's mind. Every habit can be restarted without shame.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ikigai -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-mint/50 dark:hover:border-mint/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-mint/80 dark:text-mint/70">生き甲斐</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Ikigai</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Reason for being. Habits serve life, not the other way around.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Seijaku -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-green/50 dark:hover:border-green/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-green/80 dark:text-green/70">静寂</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Seijaku</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Calm within movement. Progress does not need noise or spectacle.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mottainai -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-purple/50 dark:hover:border-purple/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-purple/80 dark:text-purple/70">もったいない</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Mottainai</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Respect for time and effort. Small actions are never wasted.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zanshin -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-blue/50 dark:hover:border-blue/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-blue/80 dark:text-blue/70">残心</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Zanshin</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">Awareness that remains. Habits shape identity beyond the checkmark.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Ma -->
+                <div class="group bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 border border-gray-200 dark:border-gray-700 hover:border-coral/50 dark:hover:border-coral/50 transition-colors">
+                    <div class="flex flex-col md:flex-row md:items-start gap-6">
+                        <div class="flex-shrink-0">
+                            <span class="text-4xl md:text-5xl font-light text-coral/80 dark:text-coral/70">間</span>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">Ma</h3>
+                            <p class="text-gray-600 dark:text-gray-300 leading-relaxed">The space between. Rest and pauses are part of the system.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Note -->
+            <div class="mt-16 text-center">
+                <div class="inline-flex items-center gap-3 bg-white dark:bg-gray-800/50 rounded-full px-6 py-4 shadow-lg border border-gray-200 dark:border-gray-700">
+                    <img src="assets/habitkit-bird.png" alt="Habitori Bird" class="w-8 h-8 dark:brightness-0 dark:invert">
+                    <p class="text-gray-600 dark:text-gray-400">
+                        <span class="font-semibold text-gray-900 dark:text-white">Tori</span> <span class="text-lg">鳥</span> = bird
+                    </p>
+                </div>
+            </div>
+
+            <!-- Copyright Footer -->
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-16">
+                <p class="text-center text-gray-600 dark:text-gray-400 text-sm">© 2026 <a href="https://northwake.dev" target="_blank" rel="noopener noreferrer" class="text-blue hover:text-mint transition">Northwake</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Shared JavaScript -->
+    <script src="js/main.js" defer></script>
+
+</body>
+</html>
