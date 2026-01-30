@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habitori - Habit Formation Research</title>
+    <meta name="description" content="How habits actually form according to science — repetition, context, and time in real-world habit formation">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/habitkit-icon.png">
+    <link rel="apple-touch-icon" href="assets/habitkit-icon.png">
+    
+    <!-- Shared Tailwind Configuration -->
+    <script src="css/tailwind-config.js"></script>
+    
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = window.tailwindConfig;
+    </script>
+    <style>
+        /* Load JetBrains Mono SemiBold font */
+        @font-face {
+            font-family: 'JetBrains Mono';
+            src: url('assets/font/JetBrainsMono-SemiBold.ttf') format('truetype');
+            font-weight: 600;
+            font-style: normal;
+        }
+    </style>
+</head>
+<body class="bg-[#F8F9FB] dark:bg-[#111318] text-gray-900 dark:text-gray-100 transition-colors">
+
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-blue focus:text-white focus:px-4 focus:py-2 focus:rounded">Skip to content</a>
+
+    <!-- Theme Toggle Button - Fixed position top right -->
+    <button 
+        id="theme-toggle" 
+        class="fixed top-6 right-6 z-50 p-3 rounded-full bg-white dark:bg-gray-800 shadow-lg hover:shadow-xl transition-all border border-gray-200 dark:border-gray-700"
+        aria-label="Toggle dark mode"
+    >
+        <svg id="sun-icon" class="w-6 h-6 text-gray-800 dark:hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"></path>
+        </svg>
+        <svg id="moon-icon" class="w-6 h-6 text-gray-200 hidden dark:block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"></path>
+        </svg>
+    </button>
+
+    <!-- Back Button -->
+    <div class="px-6 pt-20 pb-4">
+        <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="inline-flex items-center gap-2 text-blue hover:text-mint transition-colors font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+        </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main id="main">
+    <section class="py-8 px-6 pb-20">
+        <div class="max-w-4xl mx-auto">
+            <!-- Header -->
+            <div class="mb-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-coral via-mint to-green bg-clip-text text-transparent">
+                    How habits actually form<br/>(according to science)
+                </h1>
+                <p class="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto leading-relaxed">
+                    Most habits don't "click" overnight.<br>
+                    They grow — quietly, unevenly, and at different speeds for different people.
+                </p>
+            </div>
+
+            <!-- Intro -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-gray-200 dark:border-gray-700">
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    A long-term study in behavioral psychology followed people as they tried to build simple daily habits in real life: things like drinking water after breakfast or going for a short walk in the evening. Instead of focusing on motivation, the researchers tracked <em>automaticity</em> — how effortless the behavior started to feel over time.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed">
+                    What they found helps explain why habit-building often feels slower (and less predictable) than we expect.
+                </p>
+            </div>
+
+            <!-- Repetition matters -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-gray-200 dark:border-gray-700 hover:border-coral/50 dark:hover:border-coral/50 transition-colors">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Repetition matters more than motivation</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Participants repeated a small behavior in the same context every day — for example, after breakfast or before bed. As repetition increased, the behavior required less conscious effort.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Not because people tried harder, but because the brain started doing the work for them.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                    Consistency mattered more than intensity.
+                </p>
+            </div>
+
+            <!-- Habit growth isn't linear -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-gray-200 dark:border-gray-700 hover:border-mint/50 dark:hover:border-mint/50 transition-colors">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Habit growth isn't linear</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Habit strength didn't increase evenly from day to day.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Instead, it followed a gradual curve:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 dark:text-gray-300 ml-4 mb-6">
+                    <li>noticeable progress early on</li>
+                    <li>slower gains over time</li>
+                    <li>eventually leveling off</li>
+                </ul>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    This explains why habits can feel encouraging at first, then frustratingly subtle later — even when they're still forming.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                    Plateaus are part of the process.
+                </p>
+            </div>
+
+            <!-- Time varies -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-gray-200 dark:border-gray-700 hover:border-green/50 dark:hover:border-green/50 transition-colors">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Time varies more than people expect</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    When researchers looked at how long it took for behaviors to feel mostly automatic, the differences between people were large. Some habits felt established in just a few weeks, while others took many months.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Across participants, the average time to reach near-automaticity was around 66 days, but individual timelines ranged from about 18 to over 250 days.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                    There's no single deadline — only a rough expectation and a lot of variation.
+                </p>
+            </div>
+
+            <!-- Missing a day -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-gray-200 dark:border-gray-700 hover:border-purple/50 dark:hover:border-purple/50 transition-colors">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Missing a day doesn't break the habit</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    One of the most reassuring findings:<br>
+                    missing an occasional day didn't meaningfully disrupt habit formation.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    Progress wasn't fragile.<br>
+                    It didn't reset.<br>
+                    It continued as long as the behavior returned to its usual context.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                    What mattered most was the overall pattern — not perfection.
+                </p>
+            </div>
+
+            <!-- Why this matters -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-8 border border-gray-200 dark:border-gray-700 hover:border-blue/50 dark:hover:border-blue/50 transition-colors">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">Why this matters</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    This research suggests that habits aren't built through pressure, streaks, or willpower alone.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    They form through:
+                </p>
+                <ul class="list-disc list-inside space-y-2 text-lg text-gray-700 dark:text-gray-300 ml-4 mb-6">
+                    <li>small behaviors</li>
+                    <li>repeated in stable contexts</li>
+                    <li>given enough time to become automatic</li>
+                </ul>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
+                    That's the process.
+                </p>
+            </div>
+
+            <!-- The study behind this -->
+            <div class="bg-white dark:bg-gray-800/50 rounded-2xl shadow-lg p-8 md:p-12 mb-12 border border-gray-200 dark:border-gray-700">
+                <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-6">The study behind this</h2>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                    This page summarizes findings from a longitudinal study on habit formation in everyday life.
+                </p>
+                <div class="space-y-4 text-gray-700 dark:text-gray-300">
+                    <p class="font-semibold text-gray-900 dark:text-white">Study:</p>
+                    <p class="text-lg leading-relaxed"><em>How are habits formed: Modelling habit formation in the real world</em></p>
+                    <p class="text-lg leading-relaxed">European Journal of Social Psychology</p>
+                    <ul class="list-disc list-inside space-y-1 text-base ml-4 mt-4">
+                        <li>Publisher (version of record): <a href="https://onlinelibrary.wiley.com/doi/abs/10.1002/ejsp.674" target="_blank" rel="noopener noreferrer" class="text-blue hover:text-mint transition inline-flex items-center gap-1">Wiley (DOI)<svg class="w-3.5 h-3.5 shrink-0 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></li>
+                        <li>Free full-text copy: <a href="https://www.academia.edu/2475072/How_are_habits_formed_Modelling_habit_formation_in_the_real_world" target="_blank" rel="noopener noreferrer" class="text-blue hover:text-mint transition inline-flex items-center gap-1">Institutional repository (PDF)<svg class="w-3.5 h-3.5 shrink-0 opacity-70" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Copyright Footer -->
+            <div class="border-t border-gray-200 dark:border-gray-700 pt-8 mt-16">
+                <p class="text-center text-gray-600 dark:text-gray-400 text-sm">© 2026 <a href="https://northwake.dev" target="_blank" rel="noopener noreferrer" class="text-blue hover:text-mint transition">Northwake</a>. All rights reserved.</p>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <!-- Shared JavaScript -->
+    <script src="js/main.js" defer></script>
+
+</body>
+</html>
