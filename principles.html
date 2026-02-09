@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitori - Principles</title>
-    <meta name="description" content="The philosophy behind Habitori - Japanese principles that guide how we build a calm, patient habit tracker">
-    <meta name="robots" content="noindex, nofollow">
+    <title>Principles Behind Habitori — Kaizen, Wabi-sabi & Japanese Philosophy for Habits</title>
+    <meta name="description" content="The philosophy behind Habitori: Kaizen, Gaman, Wabi-sabi, Kintsugi, and more. Japanese principles that guide how we build a calm, patient habit tracker focused on consistency over perfection.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://habitori.app/principles.html">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Principles behind Habitori">
-    <meta property="og:description" content="Japanese principles that guide how we build a calm, patient habit tracker.">
+    <meta property="og:title" content="Principles Behind Habitori — Japanese Philosophy for Habit Building">
+    <meta property="og:description" content="Kaizen, Wabi-sabi, Kintsugi, and more. Japanese principles that guide how we build a calm, patient habit tracker.">
     <meta property="og:image" content="https://habitori.app/assets/og-image.png">
     <meta property="og:url" content="https://habitori.app/principles.html">
-    <meta property="og:type" content="website">
+    <meta property="og:type" content="article">
     <meta property="og:site_name" content="Habitori">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Principles behind Habitori">
-    <meta name="twitter:description" content="Japanese principles that guide how we build a calm, patient habit tracker.">
+    <meta name="twitter:title" content="Principles Behind Habitori — Japanese Philosophy for Habit Building">
+    <meta name="twitter:description" content="Kaizen, Wabi-sabi, Kintsugi, and more. Japanese principles that guide how we build a calm, patient habit tracker.">
     <meta name="twitter:image" content="https://habitori.app/assets/og-image.png">
+    
+    <!-- Structured Data - Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Principles Behind Habitori — Japanese Philosophy for Habit Building",
+        "description": "Kaizen, Gaman, Wabi-sabi, Kintsugi, Shoshin, Seijaku, Zanshin, and Ma. Japanese principles that guide how we build a calm, patient habit tracker.",
+        "url": "https://habitori.app/principles.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Habitori",
+            "url": "https://habitori.app"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Habitori"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://habitori.app/principles.html"
+        }
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
@@ -27,6 +53,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/habitkit-icon.png">
     <link rel="apple-touch-icon" href="assets/habitkit-icon.png">
     
+    <!-- Prevent dark mode flash (FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
     <!-- Shared Tailwind Configuration -->
     <script src="css/tailwind-config.js"></script>
     

@@ -3,21 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitori - Privacy Policy</title>
-    <meta name="description" content="Privacy Policy for Habitori - A private system for habits that hold, even when life is busy.">
-    <meta name="robots" content="noindex, nofollow">
+    <title>Privacy Policy & Terms of Service | Habitori</title>
+    <meta name="description" content="Habitori privacy policy and terms of service. No data collection, no accounts, no tracking. Your habits stay on your device with optional iCloud sync.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://habitori.app/privacy-terms.html">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Habitori - Privacy Policy">
+    <meta property="og:title" content="Privacy Policy & Terms of Service | Habitori">
     <meta property="og:description" content="Habitori does not collect, share, or transmit your personal information. Your data stays on your device.">
     <meta property="og:image" content="https://habitori.app/assets/og-image.png">
     <meta property="og:url" content="https://habitori.app/privacy-terms.html">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Habitori">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Habitori - Privacy Policy">
+    <meta name="twitter:title" content="Privacy Policy & Terms of Service | Habitori">
     <meta name="twitter:description" content="Habitori does not collect, share, or transmit your personal information. Your data stays on your device.">
     <meta name="twitter:image" content="https://habitori.app/assets/og-image.png">
     
@@ -27,6 +29,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/habitkit-icon.png">
     <link rel="apple-touch-icon" href="assets/habitkit-icon.png">
     
+    <!-- Prevent dark mode flash (FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
     <!-- Shared Tailwind Configuration -->
     <script src="css/tailwind-config.js"></script>
     

@@ -3,23 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Habitori - Habit Formation Research</title>
-    <meta name="description" content="How habits actually form according to science — repetition, context, and time in real-world habit formation">
-    <meta name="robots" content="noindex, nofollow">
+    <title>How Habits Actually Form — Science of Habit Formation | Habitori</title>
+    <meta name="description" content="How long does it take to build a habit? Research shows it takes 18 to 254 days, not 21. Learn why repetition beats motivation, progress isn't linear, and missing a day won't break your habits.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://habitori.app/habit-formation-research.html">
     
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Habitori - How habits actually form">
+    <meta property="og:title" content="How Habits Actually Form — The Science Behind Habit Building">
     <meta property="og:description" content="Research-backed insights on habit formation: repetition beats motivation, progress isn't linear, and missing a day won't break your habits.">
     <meta property="og:image" content="https://habitori.app/assets/og-image.png">
     <meta property="og:url" content="https://habitori.app/habit-formation-research.html">
     <meta property="og:type" content="article">
     <meta property="og:site_name" content="Habitori">
+    <meta property="og:locale" content="en_US">
     
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Habitori - How habits actually form">
+    <meta name="twitter:title" content="How Habits Actually Form — The Science Behind Habit Building">
     <meta name="twitter:description" content="Research-backed insights on habit formation: repetition beats motivation, progress isn't linear, and missing a day won't break your habits.">
     <meta name="twitter:image" content="https://habitori.app/assets/og-image.png">
+    
+    <!-- Structured Data - Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Habits Actually Form — Science of Habit Formation",
+        "description": "How long does it take to build a habit? Research shows it takes 18 to 254 days, not 21. Learn why repetition beats motivation and missing a day won't break your habits.",
+        "url": "https://habitori.app/habit-formation-research.html",
+        "publisher": {
+            "@type": "Organization",
+            "name": "Habitori",
+            "url": "https://habitori.app"
+        },
+        "author": {
+            "@type": "Organization",
+            "name": "Habitori"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://habitori.app/habit-formation-research.html"
+        }
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="shortcut icon" type="image/x-icon" href="assets/favicon.ico">
@@ -27,6 +53,14 @@
     <link rel="apple-touch-icon" sizes="180x180" href="assets/habitkit-icon.png">
     <link rel="apple-touch-icon" href="assets/habitkit-icon.png">
     
+    <!-- Prevent dark mode flash (FOUC) -->
+    <script>
+        if (localStorage.getItem('theme') === 'dark' ||
+            (!localStorage.getItem('theme') && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        }
+    </script>
+
     <!-- Shared Tailwind Configuration -->
     <script src="css/tailwind-config.js"></script>
     
@@ -64,9 +98,21 @@
         </svg>
     </button>
 
+    <!-- Back Button (same px-6 + max-w-4xl structure as main content for alignment on all screen sizes) -->
+    <div class="px-6 pt-20 pb-4">
+        <div class="max-w-4xl mx-auto">
+        <a href="index.html" class="inline-flex items-center gap-2 text-blue hover:text-mint transition-colors font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path>
+            </svg>
+            Back to Home
+        </a>
+        </div>
+    </div>
+
     <!-- Main Content -->
     <main id="main">
-    <section class="pt-20 pb-20 px-6">
+    <section class="py-8 px-6 pb-20">
         <div class="max-w-4xl mx-auto">
             <!-- Header -->
             <div class="mb-16 text-center">
@@ -172,6 +218,12 @@
                 </ul>
                 <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed font-medium">
                     That's the process.
+                </p>
+                <p class="text-lg text-gray-700 dark:text-gray-300 leading-relaxed mt-8">
+                    <a href="https://apps.apple.com/dk/app/habitori/id6758526111" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-blue hover:text-mint transition font-medium">
+                        Habitori is designed around this — try it on iPhone
+                        <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path></svg>
+                    </a>
                 </p>
             </div>
 
